@@ -1,7 +1,15 @@
 <template>
   <div class="home">
-    <h1>welcome</h1>
+    <UpperBanner />
   </div>
 </template>
 
-<script ></script>
+<script>
+import UpperBanner from "../components/home-page/UpperBanner.vue";
+export default {
+  name: "HomeView",
+  components: {
+    UpperBanner,
+  },
+};
+</script>

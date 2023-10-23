@@ -32,8 +32,8 @@ import HeartIcon from "./Navbar/HeartIcon.vue";
 import SignIn from "./Navbar/SignIn.vue";
 import Cart from "./Navbar/Cart.vue";
 import Search from "./Navbar/Search.vue";
-import Links from "../Links/Link.vue";
-import Help from "../Links/Help.vue";
+import Links from "./Navbar/Links/Link.vue";
+import Help from "./Navbar/Links/Help.vue";
 export default {
   name: "Navbar",
   inject: ["Emitter"],

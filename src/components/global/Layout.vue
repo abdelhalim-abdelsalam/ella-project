@@ -2,7 +2,7 @@
   <div class="layout">
     <v-layout>
       <CardDrawer />
-      <v-main>
+      <v-main style="padding-top: 145px">
         <slot></slot>
       </v-main>
       <Navbar />
