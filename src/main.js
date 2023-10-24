@@ -17,7 +17,10 @@ import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 
-
+//Swiper css
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const vuetify = createVuetify({
   components,

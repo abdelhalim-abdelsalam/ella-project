@@ -22,7 +22,7 @@
       <span>help</span>
     </div>
     <div class="lang d-flex align-center" style="gap: 5px" id="language-btn">
-      <span v-html="selectLang.icon"></span>
+      <span v-html="selectLang[0].icon"></span>
       <span>{{ selectLang[0].lang }} / {{ selectLang[0].currency }}</span>
       <v-icon>mdi-chevron-down</v-icon>
       <v-menu activator="#language-btn">
@@ -49,7 +49,7 @@ export default {
     selectLang: [
       {
         icon: `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
-<circle style="fill:#F0F0F0;" cx="256" cy="256" r="256"></circle>
+        <circle style="fill:#F0F0F0;" cx="256" cy="256" r="256"></circle>
 <g>
     <path style="fill:#0052B4;" d="M52.92,100.142c-20.109,26.163-35.272,56.318-44.101,89.077h133.178L52.92,100.142z"></path>
     <path style="fill:#0052B4;" d="M503.181,189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075,89.076H503.181z"></path>

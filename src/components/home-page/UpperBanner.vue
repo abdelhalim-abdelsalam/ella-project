@@ -37,7 +37,7 @@ export default {
 <style lang="scss">
 .banner {
   .parent {
-    height: 450px;
+    height: 500px;
     background-image: url(../../assets/images/banner-bg.jpg);
     background-size: cover;
     background-position:left top;
