@@ -1,19 +1,20 @@
 <template>
-  <div class="cardFlash-deals py-16">
+  <v-container fluid="">
     <div class="title mb-10 px-10 d-flex align-center justify-space-between">
-      <h1 style="color: red; padding: 50px">Flash Deals</h1>
+      <h1 style="color: red; padding: 50px">New Products</h1>
       <a href="#" class="text-black" style="font-size:14px">
         Shop All
       </a>
     </div>
-    <Swiper
+    <v-row>
+      <v-col cols="7">
+        <Swiper
       style="padding: 50px"
       :pagination="{ el: '.swiper-pagination', clickable: true }"
       :modules="modules"
-      :slides-per-view="5"
-      :space-between="35"
-      :navigation="{ prevIcon: '.swiper-prev', nextIcon: '.swiper-next' }"
-      :autoplay="{ delay: 3000 }"
+      :slides-per-view="2"
+      :space-between="20"
+      :autoplay="{delay:3000}"
     >
       <swiper-slide v-for="item in products" :key="item.id">
         <v-card elevation="0" class="pb-5">
@@ -22,15 +23,15 @@
               showenItem[item.title] ? showenItem[item.title] : item.thumbnail
             "
             class="w-100"
-            style="height: 200px; border-radius: 20px"
+            style="height: 200px"
             alt=""
           />
           <v-card-text class="pl-0 pb-1">
             {{ item.title }}
             {{
-              item.description.split(" ").length <= 8
+              item.description+ "" +item.title.split(" ").length <= 7
                 ? item.description
-                : item.description.split(" ").slice(0, 8).join(" ") + "..."
+                : item.description.split(" ").slice(0, 7).join(" ") + "..."
             }}
           </v-card-text>
           <v-rating
@@ -69,8 +70,7 @@
               class="py-2 px-12"
               style="text-transform: none; border-radius: 30px"
               variant="outlined"
-              >choose Option</v-btn
-            >
+              >choose Option</v-btn>
           </div>
         </v-card>
       </swiper-slide>
@@ -78,12 +78,24 @@
       <div class="swiper-next"></div>
       <div class="swiper-pagination"></div>
     </Swiper>
-  </div>
+      </v-col>
+      <v-col cols="5">
+        <v-hover v-slot="{isHovering,props}">
+        <img src="../../assets/images/vr-banner.webp" alt=""
+        :style="` width: 100% ;cursor:pointer ; transition:0.5s all ease-in-out; scale: ${
+          isHovering ? 1.05 : 1
+        }`"
+        v-bind="props"
+        >
+        </v-hover>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import { Pagination, Navigation, Autoplay } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 export default {
   props: {
     products: {
@@ -92,7 +104,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination, Navigation, Autoplay],
+      modules: [Pagination ,Autoplay],
     };
   },
   data: () => ({
@@ -103,6 +115,8 @@ export default {
     SwiperSlide,
   },
 };
-</script>
+</script>>
 
-<style></style>
+<style scoped>
+
+</style>

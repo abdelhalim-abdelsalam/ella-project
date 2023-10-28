@@ -1,16 +1,14 @@
 <template>
-  <div class="cardFlash-deals py-16">
+  <div class="mobile-phone">
     <div class="title mb-10 px-10 d-flex align-center justify-space-between">
-      <h1 style="color: red; padding: 50px">Flash Deals</h1>
-      <a href="#" class="text-black" style="font-size:14px">
-        Shop All
-      </a>
+      <h1 style="padding: 50px">Home Decoration</h1>
+      <a href="#" class="text-black" style="font-size: 14px"> Shop All </a>
     </div>
     <Swiper
       style="padding: 50px"
       :pagination="{ el: '.swiper-pagination', clickable: true }"
       :modules="modules"
-      :slides-per-view="5"
+      :slides-per-view="4"
       :space-between="35"
       :navigation="{ prevIcon: '.swiper-prev', nextIcon: '.swiper-next' }"
       :autoplay="{ delay: 3000 }"
@@ -52,7 +50,6 @@
               }}
             </span>
           </v-card-text>
-
           <v-btn-toggle v-model="showenItem[item.title]">
             <v-btn
               v-for="(pic, i) in item.images"
@@ -105,4 +102,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>

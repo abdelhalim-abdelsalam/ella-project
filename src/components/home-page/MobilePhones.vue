@@ -1,16 +1,14 @@
 <template>
-  <div class="cardFlash-deals py-16">
+  <div class="mobile-phone">
     <div class="title mb-10 px-10 d-flex align-center justify-space-between">
-      <h1 style="color: red; padding: 50px">Flash Deals</h1>
-      <a href="#" class="text-black" style="font-size:14px">
-        Shop All
-      </a>
+      <h1 style="padding: 50px">Top Mobile Phone</h1>
+      <a href="#" class="text-black" style="font-size: 14px"> Shop All </a>
     </div>
     <Swiper
       style="padding: 50px"
       :pagination="{ el: '.swiper-pagination', clickable: true }"
       :modules="modules"
-      :slides-per-view="5"
+      :slides-per-view="4"
       :space-between="35"
       :navigation="{ prevIcon: '.swiper-prev', nextIcon: '.swiper-next' }"
       :autoplay="{ delay: 3000 }"
@@ -79,6 +77,24 @@
       <div class="swiper-pagination"></div>
     </Swiper>
   </div>
+  <v-container>
+    <v-row>
+      <v-col cols="6" class="pr-3">
+        <img
+          src="../../assets/images/band-left-cover.webp"
+          alt=""
+          class="w-100"
+        />
+      </v-col>
+      <v-col cols="6" class="pl-3">
+        <img
+          src="../../assets/images/band-right-cover.webp"
+          alt=""
+          class="w-100"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -105,4 +121,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>
