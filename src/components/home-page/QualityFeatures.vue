@@ -3,9 +3,9 @@
     <v-container fluid style="background: rgb(234, 234, 234)">
       <v-row>
         <v-col v-for="card in cards" :key="card.title">
-          <v-hover v-slot="{isHovering , props}">
+          <v-hover v-slot="{ isHovering, props }">
             <v-card
-            v-bind="props"
+              v-bind="props"
               class="text-center d-flex justify-center align-center px-5"
               height="350px"
               :style="` width: 100% ;cursor:pointer ; transition:0.5s all ease-in-out; scale: ${
@@ -25,7 +25,6 @@
           </v-hover>
         </v-col>
       </v-row>
-      
     </v-container>
   </div>
 </template>

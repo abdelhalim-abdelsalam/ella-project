@@ -7,6 +7,37 @@ export const productsModule = defineStore("productsModule", {
     newProduct: [],
     mobilePhone: [],
     decoration: [],
+    categoryProducts: [],
+    categories: [
+      {
+        title: "Smart Phones",
+        route: "smartphones",
+      },
+      {
+        title: "Laptops",
+        route: "laptops",
+      },
+      {
+        title: "Mens Shirts",
+        route: "mens-shirts",
+      },
+      {
+        title: "Mens Watches",
+        route: "mens-watches",
+      },
+      {
+        title: "Motor Cycle",
+        route: "motorcycle",
+      },
+      {
+        title: "Fragrances",
+        route: "fragrances",
+      },
+      {
+        title: "Lighting",
+        route: "lighting",
+      },
+    ],
   }),
   actions: {
     async getProducts() {
@@ -26,6 +57,11 @@ export const productsModule = defineStore("productsModule", {
           );
         })
         .catch((err) => console.log(err));
+    },
+    async getTitle(category) {
+      await axios
+        .get(`https://dummyjson.com/products/category/${category}`)
+        .then((res) => (this.categoryProducts = res.data));
     },
   },
 });

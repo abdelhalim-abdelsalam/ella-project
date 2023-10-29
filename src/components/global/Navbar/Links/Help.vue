@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="5" class="d-flex justify-end" style="gap: 35px">
+  <v-col cols="3" class="d-flex justify-end" style="gap: 35px">
     <div class="help d-flex align-center" style="gap: 5px">
       <svg
         color="#0a6cdc"

@@ -4,7 +4,10 @@
       <v-container fluid>
         <v-row>
           <v-col cols="3" class="pl-10">
-            <img src="@/assets/images/logo.png" alt="" />
+            <a href="/">
+
+              <img src="@/assets/images/logo.png" alt=""  />
+            </a>
           </v-col>
           <Search />
           <!-- Icon -->
