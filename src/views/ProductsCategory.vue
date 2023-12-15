@@ -1,7 +1,9 @@
 <template>
   <div class="products-category">
-    <!-- <v-breadcrumbs    :items="[]"></v-breadcrumbs> -->
-    <h1 class="text-center mt-10"> {{ $route.params.title }} </h1>
+    <v-breadcrumbs >
+
+      <h5 class="text-center mt-2 my-2">Products / {{ $route.params.title }} </h5>
+    </v-breadcrumbs>
     <v-container>
       <v-row>
         <v-col 

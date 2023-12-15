@@ -8,6 +8,7 @@ export const productsModule = defineStore("productsModule", {
     mobilePhone: [],
     decoration: [],
     categoryProducts: [],
+    getTitle: [],
     categories: [
       {
         title: "Smart Phones",

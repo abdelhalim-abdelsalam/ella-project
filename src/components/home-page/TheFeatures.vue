@@ -1,5 +1,5 @@
 <template>
-  <div class="features ">
+  <div class="features">
     <v-container>
       <v-row  style="padding:5px">
         <v-col>

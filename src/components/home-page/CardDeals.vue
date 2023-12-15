@@ -1,5 +1,5 @@
 <template>
-  <div class="cardFlash-deals py-16">
+  <div class="cardFlash-deals  py-16">
     <div class="title mb-10 px-10 d-flex align-center justify-space-between">
       <h1 style="color: red; padding: 50px">Flash Deals</h1>
       <a href="#" class="text-black" style="font-size:14px">

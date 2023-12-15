@@ -18,17 +18,21 @@ const routes = [
   {
     path: "/products/:category/:title",
     name: "products_category",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ProductsCategory.vue"),
+    component: () => import("../views/ProductsCategory.vue"),
+  },
+  {
+    path: "/products/product-details",
+    name: "product_details",
+    component: () => import("../views/ProductDetails.vue"),
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;

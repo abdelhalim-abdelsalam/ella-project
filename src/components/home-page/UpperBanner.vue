@@ -1,30 +1,25 @@
 <template>
   <div class="banner">
     <div class="parent">
-      <v-container>
-        <v-row>
-          <v-col cols="6">
-            <div class="cont">
-              <h3>
-                <span>Huge Saving</span> on
-                <br />
-                UHD Televisions
-              </h3>
-              <p class="hint">Sale up to 70% off on selected items*</p>
-              <v-btn
-                variant="outlined"
-                class=" px-10"
-                style="
-                  margin-top: 30px;
-                  border-radius: 30px;
-                  text-transform: none;
-                "
-                >Shop Now</v-btn
-              >
-            </div>
-          </v-col>
-        </v-row>
-      </v-container>
+      <img src="../../assets/images/banner-bg.jpg" alt="">
+      <div class="cont">
+        <h3>
+          <span>Huge Saving</span> on
+          <br />
+          UHD Televisions
+        </h3>
+        <p class="hint">Sale up to 70% off on selected items*</p>
+        <v-btn
+          variant="outlined"
+          class=" px-10"
+          style="
+            margin-top: 30px;
+            border-radius: 30px;
+            text-transform: none;
+          "
+          >Shop Now</v-btn
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -37,13 +32,21 @@ export default {
 <style lang="scss">
 .banner {
   .parent {
-    height: 500px;
-    background-image: url(../../assets/images/banner-bg.jpg);
-    background-size: cover;
-    background-position:left top;
+    height: 550px;
+    position: relative;
+    .img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+    
     .cont {
       color: white;
       padding: 80px 0 0 150px;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 40%;
 
       h3 {
         font-size: 45px;
